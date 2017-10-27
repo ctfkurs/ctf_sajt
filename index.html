@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/stil.css">
+
+</head>
+<body>
+<!-- Popup block -->
+<!-- Kreiramo prvo div preko celog ekrana kome cemo dodeliti providnu crnu pozadinu rgba() -->
+<div id="popup-back-screen">
+    <!-- Kreiramo unutrasnji popup prozor -->
+    <div id="popup-window">
+        <!-- Close dugme -->
+        <a href='#' class="close" id="close-popup">X</a>
+        <!-- Popup inner box, ovde ide sadrzaj popup-a -->
+        <div id="popup-inner">
+            <h1>Popup Inner Content</h1>
+        </div>
+    </div>
+</div>
+
+<!-- Site begins here -->
+<div class="container">
+
+    <!-- header start -->
+    <div class="row" id="header">
+
+        <!-- Logo box start -->
+        <div class="col-lg-3 col-sm-2 col-xs-3" id="logo-box">
+            <div class="col-md-12" id="logo-box-inner">
+                <img src="/slike/comtrade-logo.png" alt="Comtrade Softvare" class="img-responsive">
+            </div>
+        </div>
+        <!-- Logo box end -->
+
+        <!-- Heading box start -->
+        <div class="col-md-6 col-sm-8 col-xs-9" id="heading-box">
+            <div class="col-md-12" id="heading-box-inner">
+                <h1><span>C</span>omtrade <span>F</span>rontend <span>D</span>evelopment</h1>
+                <h2><em>Obuka za Frontend developera</em></h2>
+            </div>
+        </div>
+        <!-- Heading box end -->
+
+        <!-- Right box start -->
+        <div class="col-md-3 col-sm-2 hidden-xs" id="right-box">
+            <div class="col-md-12" id="right-inner-box">
+                <form>
+                    <input type="search" name="search" id="search" class="form-control" placeholder="Search..."/>
+                    <br>
+                    <select name="language" id="language" class="form-control">
+                        <option value="">Izaberite jezik</option>
+                        <option value="sr">SR</option>
+                        <option value="en">EN</option>
+                        <option value="fr">FR</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+        <!-- Right box end -->
+
+        <!-- Menu block start -->
+        <div class="col-md-12" id="menu-block">
+
+            <nav class="navbar navbar-default" id="main-menu">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Počena</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Vežbe <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" target="_blank">Uvod u HTML</a></li>
+                                <li><a href="/stranice/vezbe/html/tagovi.html" target="_blank">Osnovni tagovi</a></li>
+                                <li><a href="/stranice/vezbe/html/liste.html" target="_blank">Liste</a></li>
+                                <li><a href="/stranice/vezbe/html/tabele.html" target="_blank">Tabele</a></li>
+                                <li><a href="/stranice/vezbe/js/js_basic.html" target="_blank">JS osnove</a></li>
+                                <li><a href="/stranice/vezbe/js/js_basic_numbers.html" target="_blank">JS Numbers</a></li>
+                                <li><a href="/stranice/vezbe/js/js_basic_prompt.html" target="_blank">JS Events</a></li>
+                                <li><a href="/stranice/vezbe/js/js_bgs.html" target="_blank">JS Change Bg</a></li>
+                                <li><a href="/stranice/vezbe/js/popup.html" target="_blank">JS Popup Window</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="col-sm-3 col-md-2">
+                        <form class="navbar-form" role="search">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Pozadinska slika" name="q" id="bg-image">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-3">
+                        <form class="navbar-form" role="search">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Header pozadina CSS rule" name="q" id="header-bg">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-3">
+                        <form class="navbar-form" role="search">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Footer pozadina CSS rule" name="q" id="footer-bg">
+                            </div>
+                        </form>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#" id="popup">Popup Window</a></li>
+                    </ul>
+
+                </div><!-- /.navbar-collapse -->
+            </nav>
+        </div>
+        <!-- Menu block end -->
+    </div>
+    <!-- header end -->
+
+
+    <!-- body start -->
+    <div class="row" id="body">
+
+        <!-- Left sidebar start -->
+        <div class="col-md-2 col-sm-3 hidden-xs" id="left-sidebar">
+            <div class="col-md-12" id="left-sidebar-inner">
+                <h3>Koraci do developera</h3>
+                <div class="col-md-12 img-box">
+                    <img src="/slike/steps.png" alt="Koraci do developera">
+                </div>
+                <ul class="list">
+                    <li>Uvod u Html
+                        <ol>
+                            <li>Definicja HTML-a</li>
+                            <li>Osnovni tagovi</li>
+                            <li>HTML atributi</li>
+                            <li>Forme</li>
+                        </ol>
+                    </li>
+                    <li>Uvod u CSS</li>
+                    <li>Bootstrap</li>
+                    <li>Uvod u JavaScript</li>
+                    <li>jQuery</li>
+                    <li>Uvod u JavaScript</li>
+                    <li>TypeScript</li>
+                    <li>React.js</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Left sidebar end -->
+
+        <!-- content start -->
+        <div class="col-md-8 col-sm-9 col-xs-12" id="content">
+            <div class="col-md-12" id="content-inner">
+
+                <div class="col-md-12 content-group">
+                    <div class="col-md-2 sol-sm-2 col-xs-2" style="padding-top:10px">
+                        <img src="/slike/html5.png" alt="HTML5" class="img-responsive">
+                    </div>
+                    <div class="col-md-10 col-xs-10">
+                        <h5>HTML5</h5>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                            dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                            book.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-12 content-group">
+                    <div class="col-md-2 sol-sm-2 col-xs-2" style="padding-top:10px">
+                        <img src="/slike/css3.png" alt="CSS" class="img-responsive">
+                    </div>
+                    <div class="col-md-10 col-xs-10">
+                        <h5>CSS</h5>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                            dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                            book.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-12 content-group">
+                    <div class="col-md-2 sol-sm-2 col-xs-2" style="padding-top:10px">
+                        <img src="/slike/bootstrap.png" alt="bootstrap" class="img-responsive">
+                    </div>
+                    <div class="col-md-10 col-xs-10">
+                        <h5>Bootstrap</h5>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                            dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                            book.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-12 content-group">
+                    <div class="col-md-2 sol-sm-2 col-xs-2" style="padding-top:10px">
+                        <img src="/slike/js.png" alt="JavaScript" class="img-responsive">
+                    </div>
+                    <div class="col-md-10 col-xs-10">
+                        <h5>JavaScript</h5>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                            dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                            book.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-12 content-group">
+                    <div class="col-md-2 sol-sm-2 col-xs-2" style="padding-top:10px">
+                        <img src="/slike/react.png" alt="React" class="img-responsive">
+                    </div>
+                    <div class="col-md-10 col-xs-10">
+                        <h5>React</h5>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                            dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                            book.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- content end -->
+
+        <!-- Right sidebar start -->
+        <div class="col-md-2 hidden-sm  hidden-xs" id="right-sidebar">
+            <div class="col-md-12" id="right-sidebar-inner">
+                <h3>CSS Sprite</h3>
+                <div class="col-md-12">
+                    <div class="sprite html5"></div>
+                    <h4>HTML</h4>
+                    <div class="sprite css3"></div>
+                    <h4>CSS 3</h4>
+                    <div class="sprite bootstrap"></div>
+                    <h4>Bootstrap</h4>
+                    <div class="sprite js"></div>
+                    <h4>JavaScript</h4>
+                    <div class="sprite react"></div>
+                    <h4>React.js</h4>
+                </div>
+            </div>
+        </div>
+        <!-- Right sidebar end -->
+
+    </div>
+    <!-- body end -->
+
+</div>
+<!-- container end -->
+
+<!-- Footer start -->
+<div class="row" id="footer">
+    <div class="col-md-6 col-md-offset-3" id="footer-inner">
+        <div class="col-md-4 col-sm-4 col-xs-4 small-box border-left">
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Bootstrap</li>
+                <li>JavaScript</li>
+                <li>React.js</li>
+            </ul>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-4 small-box">
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Bootstrap</li>
+                <li>JavaScript</li>
+                <li>React.js</li>
+            </ul>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-4 small-box">
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Bootstrap</li>
+                <li>JavaScript</li>
+                <li>React.js</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="col-md-12 col-sm-12 col-xs-12" id="copyright">&copy; Copyright by CodeEdu</div>
+<!-- Footer end -->
+
+
+<!-- Promrna pozadinske sliike -->
+<script type="text/javascript">
+
+    //dodadjaj na promenu vrednosti u polju, pozivamo funkciju koja menja pozadinsku sliku u body tagu
+    document.getElementById("bg-image").addEventListener("change", changeBg)
+
+    document.getElementById("header-bg").addEventListener("change", headerBg)
+    document.getElementById("footer-bg").addEventListener("change", changeFooter)
+    //dogadjaj za pokretanje pop-a, kad se klikne na dugme popup, pozivamo funkciju koja otvara popup
+    document.getElementById("popup").addEventListener("click", popupWindow)
+    //dogadjaj za ztvaranje popup-a na dugme x u samom popup-u
+    document.getElementById("close-popup").addEventListener("click", closePopup)
+    //dogadjaj za klik van popup bloka, zatvara se popup ako se klikne izvan popup diva
+    document.getElementById("popup-back-screen").onclick = function (e) {
+        if (e.target != document.getElementById('popup-window')) {
+            closePopup()
+        }
+    }
+
+    function changeBg() {
+
+        //ovo nam je konstanta
+        var path = "/slike/";
+        //ovde uzimamo vrednost iz polja
+        var imgValue = this.value;
+        //ovde kreiramo punu absolutnu putanju (/slike/slika2.jpg)
+        var img = path + imgValue;
+
+        //ovde dodajemo sliku body-ju
+        document.body.style.backgroundImage = "url('" + img + "')";
+        //postavljamo opciju no-repeat, ne zelimo da nam se pozadinska slika ponavlja
+        document.body.style.backgroundRepeat = "no-repeat";
+        //centriramo sliku
+        document.body.style.backgroundPosition = "center";
+        //ovde kazemo da se slika razvuce koliki je ekran
+        document.body.style.backgroundSize = "100% 100%";
+
+    }
+
+    function headerBg() {
+
+        var rule = document.getElementById("header-bg").value;
+        document.getElementById("header").style.background = rule;
+
+    }
+
+    function changeFooter() {
+
+        var rule = document.getElementById("footer-bg").value;
+        document.getElementById("footer").style.background = rule;
+
+    }
+
+
+    function popupWindow() {
+
+        document.getElementById("popup-back-screen").style.display = "block";
+
+        //u sledecim redovima pozicioniramo popup prozor na sredinu ekrana po horizontali
+
+        //uzimamo sirinu ekrana
+        var screenWidth = screen.width;
+        //racunamo polovinu ekrana - sirina
+        var halfHorizontal = screenWidth / 2;
+        //uzimamo sirinu popup prozora (zadata u css-u)
+        var popupWidth = document.getElementById("popup-window").offsetWidth;
+        //tacnu polovinu po sirini dobijamo tako sto od polovine ekrana oduzimamo polovinu sirine popup prozora
+        var popupH = halfHorizontal - popupWidth / 2 + "px";
+
+        //primena marginLeft na popup
+        document.getElementById("popup-window").style.marginLeft = popupH;
+
+    }
+
+    function closePopup() {
+        document.getElementById("popup-back-screen").style.display = "none";
+    }
+
+</script>
+
+<!-- scripts start-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<!-- scripts end-->
+</body>
+</html>
